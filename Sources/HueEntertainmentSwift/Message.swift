@@ -11,14 +11,11 @@ import SwiftUI
 /// A UDP message used by the hue entertainment API (v2).
 @available(iOS 14.0, *)
 public struct Message {
-	var area: HueEntertainmentArea
-	var channelColors: [UInt8: Color]
-	var forcedBrightness: Double?
+	public var area: HueEntertainmentArea
+	public var channelColors: [UInt8: Color]
+	public var forcedBrightness: Double?
 	
 	public init() {
-		self.area = area
-		self.channelColors = channelColors
-		self.forcedBrightness = forcedBrightness
 	}
 
 	/// Returns data suitable for sending over UDP to the bridge via `session.connection`. If you
