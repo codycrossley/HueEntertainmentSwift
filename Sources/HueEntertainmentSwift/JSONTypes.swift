@@ -22,16 +22,24 @@ public struct HueEntertainmentAreaResponse: Codable {
 
 public struct HueEntertainmentArea: Codable {
 	public let id: String
-	let id_v1: String? = String()
-	let type: String? = String()
-	let metadata: HueEntertainmentAreaMetadata? = HueEntertainmentAreaMetadata()
-	let configurationType: String? = String()
-	let channels: [HueEntertainmentAreaChannel]? = []
-	let status: String? = String()
+	public let id_v1: String?
+	public let type: String? 
+	public let metadata: HueEntertainmentAreaMetadata?
+	public let configurationType: String?
+	public let channels: [HueEntertainmentAreaChannel]?
+	public let status: String?
 	
-	public init(id: String) {
+	public init(id: String,
+		    id_v1: String? = String(),
+		    type: String? = String(),
+		    metadata: HueEntertainmentAreaMetadata? = HueEntertainmentAreaMetadata(),
+		    configurationType: String? = String(),
+		    channels: [HueEntertainmentAreaChannel]? = [],
+		    status: String? = String()
+		   ) {
 		self.id = id
 	}
+	
 }
 
 public struct HueEntertainmentAreaChannel: Codable {
@@ -50,7 +58,11 @@ public struct HueEntertainmentAreaPosition: Codable {
 // MARK: - Metadata
 
 public struct HueEntertainmentAreaMetadata: Codable {
-	let name: String? = String()
+	public let name: String?
+	
+	public init (name: String?) {
+		self.name = name
+	}
 }
 
 public struct HueBridgeCheck: Codable {
