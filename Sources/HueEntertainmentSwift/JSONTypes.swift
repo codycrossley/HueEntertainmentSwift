@@ -22,12 +22,12 @@ public struct HueEntertainmentAreaResponse: Codable {
 
 public struct HueEntertainmentArea: Codable {
 	let id: String
-	let id_v1: String?
-	let type: String?
-	let metadata: HueEntertainmentAreaMetadata?
-	let configurationType: String?
-	let channels: [HueEntertainmentAreaChannel]?
-	let status: String?
+	let id_v1: String? = String()
+	let type: String? = String()
+	let metadata: HueEntertainmentAreaMetadata? = []
+	let configurationType: String? = String
+	let channels: [HueEntertainmentAreaChannel]? = []
+	let status: String? = String()
 	
 	public init(id: String) {
 		self.id = id
