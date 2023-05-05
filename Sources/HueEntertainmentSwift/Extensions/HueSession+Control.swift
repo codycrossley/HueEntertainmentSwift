@@ -33,6 +33,20 @@ public extension HueSession {
 		let update = AreaUpdate(channelColors: channelColors, animation: Animation(startAt: Date(), duration: ramp))
 		updates.append(update)
 	}
+	
+	func channelsOn(channelColors: [UInt8: Color], ramp: Double = 0) {
+		guard let area = area, let channels = area.channels else {
+			return
+		}
+
+		// let colors = colors.isEmpty ? [Color.white] : colors.shuffled()
+		// for (i, channel) in channels.enumerated() {
+		//	channelColors[channel.channel_id] = colors[i % colors.count]
+		//}
+
+		let update = AreaUpdate(channelColors: channelColors, animation: Animation(startAt: Date(), duration: ramp))
+		updates.append(update)
+	}
 
 	/// Turns off lights in entertainment area.
 	func off() {
