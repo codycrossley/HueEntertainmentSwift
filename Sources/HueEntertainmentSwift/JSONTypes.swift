@@ -24,8 +24,8 @@ public struct HueEntertainmentArea: Codable {
 	let id: String
 	let id_v1: String? = String()
 	let type: String? = String()
-	let metadata: HueEntertainmentAreaMetadata? = []
-	let configurationType: String? = String
+	let metadata: HueEntertainmentAreaMetadata? = HueEntertainmentAreaMetadata()
+	let configurationType: String? = String()
 	let channels: [HueEntertainmentAreaChannel]? = []
 	let status: String? = String()
 	
@@ -50,7 +50,7 @@ public struct HueEntertainmentAreaPosition: Codable {
 // MARK: - Metadata
 
 public struct HueEntertainmentAreaMetadata: Codable {
-	let name: String?
+	let name: String? = String()
 }
 
 public struct HueBridgeCheck: Codable {
