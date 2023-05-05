@@ -26,7 +26,7 @@ public struct HueEntertainmentArea: Codable {
 	let type: String?
 	let metadata: HueEntertainmentAreaMetadata?
 	let configurationType: String?
-	let channels: [HueEntertainmentAreaChannel]?
+	public let channels: [HueEntertainmentAreaChannel]?
 	let status: String?
 }
 
