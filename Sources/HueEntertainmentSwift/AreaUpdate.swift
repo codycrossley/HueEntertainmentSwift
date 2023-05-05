@@ -10,10 +10,10 @@ import SwiftUI
 
 @available(iOS 14.0, *)
 public struct AreaUpdate {
-	public var channelColors: [UInt8: Color]
-	public var animation: Animation
+	var channelColors: [UInt8: Color]
+	var animation: Animation
 
-	public func apply(_ session: HueSession) {
+	func apply(_ session: HueSession) {
 		guard let area = session.area, let connection = session.connection else {
 			return
 		}
