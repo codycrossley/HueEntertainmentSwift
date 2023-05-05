@@ -60,9 +60,7 @@ public struct HueEntertainmentAreaPosition: Codable {
 public struct HueEntertainmentAreaMetadata: Codable {
 	public let name: String?
 	
-	public init (name: String?) {
-		self.name = name
-	}
+	public init (name: String? = String()) {}
 }
 
 public struct HueBridgeCheck: Codable {
