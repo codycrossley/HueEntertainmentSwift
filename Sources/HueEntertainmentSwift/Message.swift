@@ -15,7 +15,7 @@ public struct Message {
 	var channelColors: [UInt8: Color]
 	var forcedBrightness: Double?
 	
-	public init(area: HueEntertainmentArea, channelColors: [UInt8: Color], forcedBrightness: Double?) {
+	public init() {
 		self.area = area
 		self.channelColors = channelColors
 		self.forcedBrightness = forcedBrightness
