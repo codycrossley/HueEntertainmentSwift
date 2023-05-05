@@ -21,13 +21,17 @@ public struct HueEntertainmentAreaResponse: Codable {
 }
 
 public struct HueEntertainmentArea: Codable {
-	public let id: String
+	let id: String
 	let id_v1: String?
 	let type: String?
 	let metadata: HueEntertainmentAreaMetadata?
 	let configurationType: String?
-	public let channels: [HueEntertainmentAreaChannel]?
+	let channels: [HueEntertainmentAreaChannel]?
 	let status: String?
+	
+	public init(id: String) {
+		self.id = id
+	}
 }
 
 public struct HueEntertainmentAreaChannel: Codable {
