@@ -20,7 +20,7 @@ public struct HueEntertainmentAreaResponse: Codable {
 	let data: [HueEntertainmentArea]
 }
 
-public struct HueEntertainmentArea: Codable {
+public struct HueEntertainmentArea: Codable, Hashable {
 	public let id: String
 	public let id_v1: String?
 	public let type: String? 
@@ -48,14 +48,14 @@ public struct HueEntertainmentArea: Codable {
 	
 }
 
-public struct HueEntertainmentAreaChannel: Codable {
+public struct HueEntertainmentAreaChannel: Codable, Hashable {
 	let channel_id: UInt8
 	let position: HueEntertainmentAreaPosition?
 }
 
 // MARK: - Position
 
-public struct HueEntertainmentAreaPosition: Codable {
+public struct HueEntertainmentAreaPosition: Codable, Hashable {
 	let x: Double?
 	let y: Double?
 	let z: Double?
@@ -63,7 +63,7 @@ public struct HueEntertainmentAreaPosition: Codable {
 
 // MARK: - Metadata
 
-public struct HueEntertainmentAreaMetadata: Codable {
+public struct HueEntertainmentAreaMetadata: Codable, Hashable {
 	public let name: String?
 	
 	public init (name: String? = String()) { self.name = name }
