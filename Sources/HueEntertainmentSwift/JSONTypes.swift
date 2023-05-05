@@ -38,6 +38,12 @@ public struct HueEntertainmentArea: Codable {
 		    status: String? = String()
 		   ) {
 		self.id = id
+		self.id_v1 = id_v1
+		self.type = type
+		self.metadata = metadata
+		self.configurationType = configurationType
+		self.channels = channels
+		self.status = status
 	}
 	
 }
@@ -60,7 +66,7 @@ public struct HueEntertainmentAreaPosition: Codable {
 public struct HueEntertainmentAreaMetadata: Codable {
 	public let name: String?
 	
-	public init (name: String? = String()) {}
+	public init (name: String? = String()) { self.name = name }
 }
 
 public struct HueBridgeCheck: Codable {
