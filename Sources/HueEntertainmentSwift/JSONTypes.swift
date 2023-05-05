@@ -21,7 +21,7 @@ public struct HueEntertainmentAreaResponse: Codable {
 }
 
 public struct HueEntertainmentArea: Codable {
-	let id: String
+	public let id: String
 	let id_v1: String? = String()
 	let type: String? = String()
 	let metadata: HueEntertainmentAreaMetadata? = HueEntertainmentAreaMetadata()
