@@ -35,7 +35,7 @@ public extension HueSession {
 	}
 	
 	func channelsOn(channelColors: [UInt8: Color], ramp: Double = 0) {
-		guard let area = area, let channels = area.channels else {
+		guard let area = area else {
 			return
 		}
 
