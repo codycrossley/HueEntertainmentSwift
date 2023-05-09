@@ -48,8 +48,7 @@ public struct HueEntertainmentArea: Codable, Hashable {
 	
 }
 
-public struct HueEntertainmentAreaChannel: Codable, Hashable {
-	let id: String = UUID().uuidString
+public struct HueEntertainmentAreaChannel: Codable, Hashable, Identifiable {
 	let channel_id: UInt8
 	let position: HueEntertainmentAreaPosition?
 }
