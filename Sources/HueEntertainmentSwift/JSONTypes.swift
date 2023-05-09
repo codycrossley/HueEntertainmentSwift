@@ -48,7 +48,7 @@ public struct HueEntertainmentArea: Codable, Hashable {
 	
 }
 
-public struct HueEntertainmentAreaChannel: Codable, Hashable, Identifiable {
+public struct HueEntertainmentAreaChannel: Codable, Hashable {
 	let channel_id: UInt8
 	let position: HueEntertainmentAreaPosition?
 }
