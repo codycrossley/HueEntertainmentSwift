@@ -54,7 +54,6 @@ public struct HueEntertainmentAreaChannel: Codable, Hashable, Identifiable {
 	public let position: HueEntertainmentAreaPosition?
 	
 	public init(channel_id: UInt8, position: HueEntertainmentAreaPosition?) {
-		self.id = id
 		self.channel_id = channel_id
 		self.position = position
 	}
