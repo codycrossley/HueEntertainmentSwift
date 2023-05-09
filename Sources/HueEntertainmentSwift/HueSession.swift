@@ -87,14 +87,21 @@ public class HueSession: NSObject, URLSessionDelegate {
 		guard let areaResponse: HueEntertainmentAreaResponse = try await get("clip/v2/resource/entertainment_configuration") else {
 			throw HueError.requestError("Could not load areas")
 		}
+		
+		print("1")
 
 		if !areaResponse.errors.isEmpty {
 			throw HueError.requestError("Error loading areas: \(areaResponse.errors.debugDescription)")
 		}
+		
+		print("2")
 
 		if areaResponse.data.isEmpty {
 			throw HueError.requestError("No areas found")
 		}
+		
+		print("3")
+		
 		print(areaResponse)
 		return areaResponse.data
 	}
