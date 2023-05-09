@@ -17,7 +17,9 @@ extension HueSession {
 
 	public func get<ReturnType: Codable>(_ path: String) async throws -> ReturnType? {
 		print("FUNC: get()...")
-		return try await makeRequest(method: "GET", path: path, data: DummyCodable?.none)
+		let result = try await makeRequest(method: "GET", path: path, data: DummyCodable?.none)
+		print(result)
+		return result
 	}
 
 	public func post<InputType: Codable, ReturnType: Codable>(_ path: String, data: InputType) async throws -> ReturnType? {
