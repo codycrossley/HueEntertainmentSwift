@@ -95,7 +95,7 @@ public class HueSession: NSObject, URLSessionDelegate {
 		if areaResponse.data.isEmpty {
 			throw HueError.requestError("No areas found")
 		}
-		print(areaResponse.data)
+		print(areaResponse)
 		return areaResponse.data
 	}
 
