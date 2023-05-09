@@ -83,8 +83,10 @@ public class HueSession: NSObject, URLSessionDelegate {
 	/// Returns the available entertainment areas configured in the Hue app. You'll use one of these set ``area`` on the session.
 	public func areas() async throws -> [HueEntertainmentArea] {
 		print("areas()...")
+		print("...")
 		
 		guard let areaResponse: HueEntertainmentAreaResponse = try await get("clip/v2/resource/entertainment_configuration") else {
+			print("FAIL")
 			throw HueError.requestError("Could not load areas")
 		}
 		
