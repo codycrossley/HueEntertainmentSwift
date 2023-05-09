@@ -51,6 +51,11 @@ public struct HueEntertainmentArea: Codable, Hashable {
 public struct HueEntertainmentAreaChannel: Codable, Hashable {
 	let channel_id: UInt8
 	let position: HueEntertainmentAreaPosition?
+	
+	public init(channel_id: UInt8, position: HueEntertainmentAreaPosition?) {
+		self.channel_id = channel_id
+		self.position = position
+	}
 }
 
 // MARK: - Position
